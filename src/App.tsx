@@ -65,14 +65,14 @@ function PageContainer(props: any) {
           }}>
             <Box sx={{
               display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center"
+              alignItems: "center",
+              gap: "16px"
             }}>
+              <img src="profile.jpg" height="96px" style={{ borderRadius: "50%" }} />
               <Box>
                 <Typography variant="h4"><b>Leif Johannesson</b></Typography>
                 <Typography variant="h6">Software/Game Developer</Typography>
               </Box>
-              <img src="profile.png" height="64px" style={{ borderRadius: "50%" }} />
             </Box>
             <Box sx={{
               display: "flex",
