@@ -236,25 +236,35 @@ function ContactLink(props: any) {
   return (
     <Box sx={{
       display: "flex",
+      flexDirection: "column",
       alignItems: "center",
-      gap: "8px"
+      gap: "8px",
+      marginBottom: "32px"
     }}>
-      {props.icon}
+      <props.icon sx={{ height: "64px", width: "64px" }} />
       <Typography variant="subtitle1">{props.children}</Typography>
     </Box>
   )
 }
 
 function ContactPage() {
+  const flexParams = {
+    display: "flex",
+    gap: "32px",
+    justifyContent: "center"
+  }
+
   return (
     <PageContainer>
       <Typography>My email and Discord are the best ways to reach me. Thank you!</Typography>
       <br />
-      <ContactLink icon={<EmailIcon />}><b>Email:</b> lp.johannesson@gmail.com</ContactLink>
-      <ContactLink icon={<DiscordIcon />}><b>Discord:</b> lpjohannesson</ContactLink>
-      <ContactLink icon={<GitHubIcon />}><b>GitHub:</b> <Link href="https://github.com/lpjohannesson">Link</Link></ContactLink>
-      <ContactLink icon={<LinkedInIcon />}><b>LinkedIn:</b> <Link href="https://www.linkedin.com/in/lpjohannesson/">Link</Link></ContactLink>
-      <ContactLink icon={<FiverrIcon />}><b>Fiverr:</b> <Link href="https://www.fiverr.com/crossfrogmedia">Link</Link></ContactLink>
+      <ContactLink icon={EmailIcon}><b>Email:</b> lp.johannesson@gmail.com</ContactLink>
+      <ContactLink icon={DiscordIcon}><b>Discord:</b> lpjohannesson</ContactLink>
+      <Box sx={flexParams}>
+        <ContactLink icon={GitHubIcon}><b>GitHub:</b> <Link href="https://github.com/lpjohannesson">Link</Link></ContactLink>
+        <ContactLink icon={LinkedInIcon}><b>LinkedIn:</b> <Link href="https://www.linkedin.com/in/lpjohannesson/">Link</Link></ContactLink>
+        <ContactLink icon={FiverrIcon}><b>Fiverr:</b> <Link href="https://www.fiverr.com/crossfrogmedia">Link</Link></ContactLink>
+      </Box>
     </PageContainer>
   )
 }
