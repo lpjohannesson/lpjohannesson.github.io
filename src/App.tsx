@@ -188,8 +188,9 @@ function ProjectDisplay(props: any) {
           position: "absolute",
           top: "50%",
           left: "50%",
-          transform: "translate(-50%, -50%)"
-        }} width={props.portrait ? "480" : "854"} height={props.portrait ? "854" : "480"} frameborder="0" allowfullscreen="true" src={`https://www.youtube.com/embed/${props.youTubeId}?autoplay=1`}></iframe>
+          transform: "translate(-50%, -50%)",
+          border: "none"
+        }} width={props.portrait ? "480" : "854"} height={props.portrait ? "854" : "480"} allow="fullscreen" src={`https://www.youtube.com/embed/${props.youTubeId}?autoplay=1`}></iframe>
       </Box> : null}
     </>
   )
