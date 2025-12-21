@@ -1,5 +1,5 @@
 import { Box, Typography, Link, Button } from "@mui/material"
-import { Route, BrowserRouter, Routes, Link as RouterLink } from "react-router"
+import { Route, HashRouter as Router, Routes, Link as RouterLink } from "react-router"
 import { motion } from 'framer-motion';
 import SvgIcon from '@mui/material/SvgIcon';
 import EmailIcon from '@mui/icons-material/Email';
@@ -265,13 +265,13 @@ function App() {
   }, []);
 
   return (
-    <BrowserRouter>
+    <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
-    </BrowserRouter>
+    </Router>
   )
 }
 
