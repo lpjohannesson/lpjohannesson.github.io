@@ -5,10 +5,17 @@ import SvgIcon from '@mui/material/SvgIcon';
 import EmailIcon from '@mui/icons-material/Email';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+import { useEffect, useState } from "react";
 
 const DiscordIcon = (props: any) => (
   <SvgIcon {...props} viewBox="0 0 24 24">
     <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z" />
+  </SvgIcon>
+);
+const FiverrIcon = (props: any) => (
+  <SvgIcon {...props} viewBox="0 0 1125 1125">
+    <path d="M535.000 10.278 C 534.725 10.539,530.450 11.005,525.500 11.313 C 501.198 12.824,461.052 18.663,442.000 23.456 C 441.175 23.664,438.250 24.344,435.500 24.967 C 412.204 30.247,376.080 41.954,351.554 52.172 C 262.795 89.150,184.443 149.513,124.123 227.385 C 112.994 241.754,92.734 272.177,83.630 288.194 C 46.827 352.939,23.337 423.928,14.539 497.000 C 8.084 550.609,8.977 595.399,17.631 652.000 C 25.564 703.892,41.481 754.299,65.571 803.822 C 78.862 831.145,88.062 847.389,102.841 869.626 C 172.501 974.435,274.916 1051.966,395.000 1090.797 C 426.847 1101.095,449.237 1106.101,492.500 1112.593 C 495.797 1113.088,497.197 1113.255,514.000 1115.155 C 529.748 1116.936,598.447 1116.945,614.000 1115.168 C 634.764 1112.797,630.472 1113.363,649.000 1110.548 C 745.148 1095.937,837.967 1054.592,913.906 992.551 C 974.644 942.927,1024.879 880.219,1059.343 811.000 C 1086.141 757.179,1104.020 699.801,1112.016 641.964 C 1112.660 637.309,1113.379 632.150,1113.614 630.500 C 1117.133 605.805,1118.621 565.923,1117.083 537.500 C 1115.673 511.444,1114.824 503.503,1110.405 475.000 C 1098.786 400.065,1069.892 325.525,1027.256 260.500 C 958.481 155.607,856.979 77.504,738.000 37.928 C 723.721 33.178,698.203 26.018,686.806 23.563 C 664.138 18.680,643.691 15.376,621.000 12.927 C 615.225 12.304,608.475 11.574,606.000 11.304 C 599.739 10.622,535.614 9.695,535.000 10.278 M659.000 279.500 L 659.000 339.000 615.131 339.000 C 566.460 339.000,558.614 339.692,547.241 344.988 C 538.546 349.038,530.749 356.701,526.449 365.425 C 522.026 374.398,521.013 380.785,521.006 399.750 L 521.000 415.000 662.000 415.000 L 803.000 415.000 803.000 636.000 L 803.000 857.000 731.000 857.000 L 659.000 857.000 659.000 695.500 L 659.000 534.000 590.000 534.000 L 521.000 534.000 521.000 695.500 L 521.000 857.000 449.003 857.000 L 377.006 857.000 376.753 695.750 L 376.500 534.500 335.250 534.239 L 294.000 533.978 294.000 474.489 L 294.000 415.000 335.394 415.000 L 376.788 415.000 377.275 384.250 C 377.698 357.538,378.049 352.187,379.947 343.500 C 392.738 284.942,434.478 242.866,495.495 227.020 C 507.325 223.948,509.494 223.521,521.000 222.002 C 533.408 220.364,534.313 220.342,597.750 220.168 L 659.000 220.000 659.000 279.500 " />
   </SvgIcon>
 );
 
@@ -118,44 +125,73 @@ function HomePage() {
 }
 
 function ProjectDisplay(props: any) {
-  return (
-    <Box sx={{
-      border: "4px solid #333333",
-      borderRadius: "16px",
-      overflow: "hidden",
-      flex: "1"
-    }}>
-      <Box sx={{
-        backgroundImage: `url(${props.bg})`,
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-        height: "200px"
-      }}>
+  const [showingVideo, setShowingVideo] = useState(false);
 
-      </Box>
+  return (
+    <>
       <Box sx={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-between",
-        height: "200px"
+        border: "4px solid #333333",
+        borderRadius: "16px",
+        overflow: "hidden",
+        flex: "1"
       }}>
         <Box sx={{
-          padding: "8px 10px"
+          backgroundImage: `url(${props.bg})`,
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          height: "200px"
         }}>
-          <Typography variant="h6"><b>{props.title}</b></Typography>
-          <Typography variant="subtitle2">{props.children}</Typography>
-        </Box>
 
-        <Link href={props.gitHubLink}>
-          <Button variant="contained" sx={{
-            width: "100%",
-            borderRadius: "0"
+        </Box>
+        <Box sx={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
+          height: "250px"
+        }}>
+          <Box sx={{
+            padding: "8px 10px"
           }}>
-            <GitHubIcon style={{ marginRight: "8px" }} />View on GitHub
-          </Button>
-        </Link>
+            <Typography variant="h6"><b>{props.title}</b></Typography>
+            <Typography variant="subtitle2">{props.children}</Typography>
+          </Box>
+
+          <Box>
+            <Button variant="contained" onClick={() => { setShowingVideo(true); }} sx={{
+              width: "100%",
+              borderRadius: "0",
+              backgroundColor: "red"
+            }}>
+              <PlayArrowIcon style={{ marginRight: "8px" }} />Play demo video
+            </Button>
+            <Link href={props.gitHubLink}>
+              <Button variant="contained" sx={{
+                width: "100%",
+                borderRadius: "0"
+              }}>
+                <GitHubIcon style={{ marginRight: "8px" }} />View on GitHub
+              </Button>
+            </Link>
+          </Box>
+        </Box>
       </Box>
-    </Box>
+      {showingVideo ? <Box onClick={() => { setShowingVideo(false); }} sx={{
+        position: "absolute",
+        left: "0",
+        top: "0",
+        width: "100vw",
+        height: "100vh",
+        zIndex: "1",
+        backdropFilter: "blur(8px)"
+      }}>
+        <iframe style={{
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)"
+        }} width={props.portrait ? "480" : "854"} height={props.portrait ? "854" : "480"} frameborder="0" allowfullscreen="true" src={`https://www.youtube.com/embed/${props.youTubeId}?autoplay=1`}></iframe>
+      </Box> : null}
+    </>
   )
 }
 
@@ -164,12 +200,15 @@ function ProjectsPage() {
     <PageContainer>
       <Typography variant="h6"><b>Games</b></Typography>
       <Box sx={{
-        display: "flex"
+        display: "flex",
+        gap: "8px"
       }}>
         <ProjectDisplay
           title="Eyeballin' It"
           bg="projects/eyeballin-it.png"
-          gitHubLink="https://github.com/lpjohannesson/eyeballin-it">
+          gitHubLink="https://github.com/lpjohannesson/eyeballin-it"
+          youTubeId="qyFzbteV2KQ"
+          portrait={true}>
           Fully-featured puzzle game for Android using Godot Engine, including Google Ads integration.
           <br /><br />
           <Link href="https://lpjohannesson.github.io/eyeballin-it/">Play it online!</Link>
@@ -177,13 +216,15 @@ function ProjectsPage() {
         <ProjectDisplay
           title="AimPlat"
           bg="projects/aim-plat.png"
-          gitHubLink="https://github.com/lpjohannesson/AimPlat">
-          3D character controller prototype with a custom model using Unity and Blender.
+          gitHubLink="https://github.com/lpjohannesson/AimPlat"
+          youTubeId="kTeiTHk6080">
+          3D character controller test with custom-made assets using Unity and Blender.
         </ProjectDisplay>
         <ProjectDisplay
           title="Robot Game"
           bg="projects/robot-game.png"
-          gitHubLink="https://github.com/lpjohannesson/robot-game">
+          gitHubLink="https://github.com/lpjohannesson/robot-game"
+          youTubeId="0IRnIBfflTQ">
           2D top-down shooter game created as a school project in MonoGame.
         </ProjectDisplay>
       </Box>
@@ -213,12 +254,16 @@ function ContactPage() {
       <ContactLink icon={<DiscordIcon />}><b>Discord:</b> lpjohannesson</ContactLink>
       <ContactLink icon={<GitHubIcon />}><b>GitHub:</b> <Link href="https://github.com/lpjohannesson">Link</Link></ContactLink>
       <ContactLink icon={<LinkedInIcon />}><b>LinkedIn:</b> <Link href="https://www.linkedin.com/in/lpjohannesson/">Link</Link></ContactLink>
-      <ContactLink icon={<img src="fiverr.svg" width="24px" draggable="false" />}><b>Fiverr:</b> <Link href="https://www.fiverr.com/crossfrogmedia">Link</Link></ContactLink>
+      <ContactLink icon={<FiverrIcon />}><b>Fiverr:</b> <Link href="https://www.fiverr.com/crossfrogmedia">Link</Link></ContactLink>
     </PageContainer>
   )
 }
 
 function App() {
+  useEffect(() => {
+    document.title = 'Portfolio';
+  }, []);
+
   return (
     <BrowserRouter>
       <Routes>
