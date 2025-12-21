@@ -37,7 +37,6 @@ function NavButton(props: any) {
 function PageContainer(props: any) {
   return (
     <Box sx={{
-      backgroundColor: "#222222",
       color: "white",
       height: "100vh",
       display: "flex",
