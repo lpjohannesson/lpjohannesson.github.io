@@ -38,7 +38,7 @@ function PageContainer(props: any) {
   return (
     <Box sx={{
       color: "white",
-      height: "100vh",
+      height: "900px",
       display: "flex",
       flexDirection: "column"
     }}>
