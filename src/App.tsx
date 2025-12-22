@@ -271,7 +271,7 @@ function ContactPage() {
 
 function App() {
   useEffect(() => {
-    document.title = 'Portfolio';
+    document.title = 'Leif Johannesson Portfolio';
   }, []);
 
   return (
