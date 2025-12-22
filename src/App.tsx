@@ -110,15 +110,9 @@ function PageContainer(props: any) {
 function HomePage() {
   return (
     <PageContainer>
-      <Box sx={{
-          display: "flex",
-          flexDirection: "column",
-          height: "100%"
-        }}>
-          <Typography variant="subtitle1">Hello! I'm a software and game developer from Canada.</Typography>
-          <Typography variant="subtitle1">Here is my resume <Link href="https://docs.google.com/document/d/1lwQBg_FuuACZvSnHIJ3o34GddLe9ElhGt7qHqYBQVyU/edit?usp=sharing">(link)</Link>:</Typography>
-          <iframe style={{ flex: "1", border: "none" }} width="100%" src="https://docs.google.com/document/d/e/2PACX-1vRambdM9vglKdwpvNl2tgXALH8ikaGPPuB8nc6ecGKnu_721nM8vFL-8BVDFwsLapRfwDgozmg8atUw/pub?embedded=true"></iframe>
-        </Box>
+      <Typography variant="subtitle1">Hello! I'm a software and game developer from Canada.</Typography>
+      <Typography variant="subtitle1">Here is my resume <Link href="https://docs.google.com/document/d/1lwQBg_FuuACZvSnHIJ3o34GddLe9ElhGt7qHqYBQVyU/edit?usp=sharing">(link)</Link>:</Typography>
+      <iframe style={{ height: "600px", border: "none" }} width="100%" src="https://docs.google.com/document/d/e/2PACX-1vRambdM9vglKdwpvNl2tgXALH8ikaGPPuB8nc6ecGKnu_721nM8vFL-8BVDFwsLapRfwDgozmg8atUw/pub?embedded=true"></iframe>
     </PageContainer>
   )
 }
@@ -138,7 +132,7 @@ function ProjectDisplay(props: any) {
           backgroundImage: `url(${props.bg})`,
           backgroundPosition: "center",
           backgroundSize: "cover",
-          height: "200px"
+          height: "220px"
         }}>
 
         </Box>
@@ -146,7 +140,7 @@ function ProjectDisplay(props: any) {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          height: "250px"
+          height: "220px"
         }}>
           <Box sx={{
             padding: "8px 10px"
@@ -196,37 +190,55 @@ function ProjectDisplay(props: any) {
 }
 
 function ProjectsPage() {
+  const containerStyle = {
+    display: "flex",
+    gap: "8px"
+  };
+
   return (
     <PageContainer>
       <Typography variant="h6"><b>Games</b></Typography>
       <Box sx={{
+        maxHeight: "600px",
+        overflow: "auto",
         display: "flex",
-        gap: "8px"
-      }}>
-        <ProjectDisplay
-          title="Eyeballin' It"
-          bg="projects/eyeballin-it.png"
-          gitHubLink="https://github.com/lpjohannesson/eyeballin-it"
-          youTubeId="qyFzbteV2KQ"
-          portrait={true}>
-          Fully-featured puzzle game for Android using Godot Engine, including Google Ads integration.
-          <br /><br />
-          <Link href="https://lpjohannesson.github.io/eyeballin-it/">Play it online!</Link>
-        </ProjectDisplay>
-        <ProjectDisplay
-          title="AimPlat"
-          bg="projects/aim-plat.png"
-          gitHubLink="https://github.com/lpjohannesson/AimPlat"
-          youTubeId="kTeiTHk6080">
-          3D character controller test with custom-made assets using Unity and Blender.
-        </ProjectDisplay>
-        <ProjectDisplay
-          title="Robot Game"
-          bg="projects/robot-game.png"
-          gitHubLink="https://github.com/lpjohannesson/robot-game"
-          youTubeId="0IRnIBfflTQ">
-          2D top-down shooter game created as a school project in MonoGame.
-        </ProjectDisplay>
+        flexDirection: "column",
+        gap: "8px" }}>
+        <Box sx={containerStyle}>
+          <ProjectDisplay
+            title="Eyeballin' It"
+            bg="projects/eyeballin-it.png"
+            gitHubLink="https://github.com/lpjohannesson/eyeballin-it"
+            youTubeId="qyFzbteV2KQ"
+            portrait={true}>
+            Fully-featured puzzle game for Android using Godot Engine, including Google Ads integration.
+            <br /><br />
+            <Link href="https://lpjohannesson.github.io/eyeballin-it/">Play it online!</Link>
+          </ProjectDisplay>
+          <ProjectDisplay
+            title="AimPlat"
+            bg="projects/aim-plat.png"
+            gitHubLink="https://github.com/lpjohannesson/AimPlat"
+            youTubeId="kTeiTHk6080">
+            3D character controller test with custom-made assets using Unity and Blender.
+          </ProjectDisplay>
+        </Box>
+        <Box sx={containerStyle}>
+          <ProjectDisplay
+            title="Bitfielder"
+            bg="projects/bitfielder.png"
+            gitHubLink="https://github.com/lpjohannesson/bitfielder_godot"
+            youTubeId="I_FGMD7gTSw">
+            2D sandbox game with networked multiplayer using Godot Engine.
+          </ProjectDisplay>
+          <ProjectDisplay
+            title="Robot Game"
+            bg="projects/robot-game.png"
+            gitHubLink="https://github.com/lpjohannesson/robot-game"
+            youTubeId="0IRnIBfflTQ">
+            2D top-down shooter game created as a school project in MonoGame.
+          </ProjectDisplay>
+        </Box>
       </Box>
     </PageContainer>
   )
