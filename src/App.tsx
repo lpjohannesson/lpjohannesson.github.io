@@ -93,8 +93,8 @@ function PageContainer(props: any) {
             }}>
             <Box sx={{ flex: "1" }}>
               <motion.div style={{ height: "100%" }}
-                initial={{ opacity: 0, marginTop: "16px" }}
-                animate={{ opacity: 1, marginTop: "0" }}
+                initial={{ opacity: 0, transform: "translate(0, 16px)" }}
+                animate={{ opacity: 1, transform: "none" }}
                 transition={{ duration: 0.5 }}>
                 {props.children}
               </motion.div>
