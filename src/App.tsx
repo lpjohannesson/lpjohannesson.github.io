@@ -6,7 +6,7 @@ import EmailIcon from '@mui/icons-material/Email';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 const DiscordIcon = (props: any) => (
   <SvgIcon {...props} viewBox="0 0 24 24">
@@ -122,7 +122,7 @@ function HomePage() {
 }
 
 function ProjectDisplay(props: any) {
-  const [showingVideo, setShowingVideo] = useState(false);
+  
 
   return (
     <>
@@ -172,23 +172,7 @@ function ProjectDisplay(props: any) {
           </Box>
         </Box>
       </Box>
-      {showingVideo ? <Box onClick={() => { setShowingVideo(false); }} sx={{
-        position: "absolute",
-        left: "0",
-        top: "0",
-        width: "100vw",
-        height: "100vh",
-        zIndex: "1",
-        backdropFilter: "blur(8px)"
-      }}>
-        <iframe style={{
-          position: "absolute",
-          top: "50%",
-          left: "50%",
-          transform: "translate(-50%, -50%)",
-          border: "none"
-        }} width={props.portrait ? "480" : "854"} height={props.portrait ? "854" : "480"} allow="fullscreen" src={`https://www.youtube.com/embed/${props.youTubeId}?autoplay=1`}></iframe>
-      </Box> : null}
+      
     </>
   )
 }
@@ -286,18 +270,39 @@ function ContactPage() {
 }
 
 function App() {
+  const [video, setVideo] = useContext<any | null>(null);
+
   useEffect(() => {
     document.title = 'Leif Johannesson Portfolio';
   }, []);
 
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/projects" element={<ProjectsPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-      </Routes>
-    </Router>
+  return (<>
+  
+      <Router>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+        </Routes>
+      </Router>
+      {video == null ? null : <Box onClick={() => { setVideo(null); }} sx={{
+        position: "absolute",
+        left: "0",
+        top: "0",
+        width: "100vw",
+        height: "100vh",
+        zIndex: "1",
+        backdropFilter: "blur(8px)"
+      }}>
+        <iframe style={{
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          border: "none"
+        }} width={video.portrait ? "480" : "854"} height={video.portrait ? "854" : "480"} allow="fullscreen" src={`https://www.youtube.com/embed/${video.youTubeId}?autoplay=1`}></iframe>
+      </Box>}
+    </>
   )
 }
 
