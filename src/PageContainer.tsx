@@ -1,12 +1,12 @@
 import { Box, Button, Typography } from "@mui/material";
 import { Outlet, Link as RouterLink } from "react-router";
-import { motion } from 'framer-motion';
-import type { ReactNode } from "react";
+import { useState, type ReactNode } from "react";
+import FadeContainer from "./FadeContainer";
 
-function NavButton(props: { page: string, children: ReactNode }) {
+function NavButton(props: { page: string, children: ReactNode, reset: () => void }) {
     return (
         <RouterLink to={props.page} style={{ width: "100%" }}>
-            <Button variant="outlined" sx={{
+            <Button onClick={props.reset} variant="outlined" sx={{
                 color: "white",
                 borderColor: "#666666",
                 textTransform: "lowercase",
@@ -19,6 +19,12 @@ function NavButton(props: { page: string, children: ReactNode }) {
 }
 
 function PageContainer() {
+    const [resetKey, setResetKey] = useState(0);
+
+    const reset = () => {
+        setResetKey(prevKey => prevKey + 1);
+    };
+
     return (
         <Box sx={{
             color: "white",
@@ -63,9 +69,9 @@ function PageContainer() {
                             justifyContent: "space-between",
                             gap: "8px"
                         }}>
-                            <NavButton page="/">Home</NavButton>
-                            <NavButton page="/projects">Projects</NavButton>
-                            <NavButton page="/contact">Contact / Links</NavButton>
+                            <NavButton reset={reset} page="/">Home</NavButton>
+                            <NavButton reset={reset} page="/projects">Projects</NavButton>
+                            <NavButton reset={reset} page="/contact">Contact / Links</NavButton>
                         </Box>
                     </Box>
                     <Box sx={{
@@ -76,16 +82,9 @@ function PageContainer() {
                         gap: "8px"
                     }}>
                         <Box sx={{ flex: "1" }}>
-                            <motion.div style={{
-                                height: "100%",
-                                display: "flex",
-                                flexDirection: "column"
-                            }}
-                                initial={{ opacity: 0, transform: "translate(0, 16px)" }}
-                                animate={{ opacity: 1, transform: "none" }}
-                                transition={{ duration: 0.5 }}>
+                            <FadeContainer key={resetKey}>
                                 <Outlet />
-                            </motion.div>
+                            </FadeContainer>
                         </Box>
                         <Typography variant="subtitle2" align="center">
                             Copyright &copy; 2025 Leif Johannesson. Website custom-built using React.

@@ -1,11 +1,12 @@
 import { Box, Button } from "@mui/material";
-import { type ReactNode } from "react";
+import { useState, type ReactNode } from "react";
 import { Outlet, Link as RouterLink } from "react-router";
+import FadeContainer from "./FadeContainer";
 
-function NavButton(props: { page: string, children: ReactNode }) {
+function NavButton(props: { page: string, children: ReactNode, reset: () => void }) {
     return (
         <RouterLink to={`/projects/${props.page}`} style={{ width: "100%" }}>
-            <Button variant="outlined" sx={{
+            <Button onClick={props.reset} variant="outlined" sx={{
                 color: "white",
                 borderColor: "#666666",
                 textTransform: "none",
@@ -18,6 +19,12 @@ function NavButton(props: { page: string, children: ReactNode }) {
 }
 
 function ProjectsPageContainer() {
+    const [resetKey, setResetKey] = useState(0);
+
+    const reset = () => {
+        setResetKey(prevKey => prevKey + 1);
+    };
+
     return (
         <>
             <Box sx={{
@@ -26,8 +33,8 @@ function ProjectsPageContainer() {
                 gap: "8px",
                 marginBottom: "8px"
             }}>
-                <NavButton page="/">Games</NavButton>
-                <NavButton page="/3d-art">3D Art</NavButton>
+                <NavButton reset={reset} page="/">Games</NavButton>
+                <NavButton reset={reset} page="/3d-art">3D Art</NavButton>
             </Box>
             <Box sx={{
                 maxHeight: "580px",
@@ -36,7 +43,9 @@ function ProjectsPageContainer() {
                 flexDirection: "column",
                 gap: "8px"
             }}>
-                <Outlet />
+                <FadeContainer key={resetKey}>
+                    <Outlet />
+                </FadeContainer>
             </Box>
         </>
     )
