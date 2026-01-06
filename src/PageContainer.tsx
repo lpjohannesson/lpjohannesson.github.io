@@ -22,7 +22,7 @@ function PageContainer(props: { children: ReactNode }) {
     return (
         <Box sx={{
             color: "white",
-            height: "900px",
+            height: "880px",
             display: "flex",
             flexDirection: "column"
         }}>
@@ -87,7 +87,9 @@ function PageContainer(props: { children: ReactNode }) {
                                 {props.children}
                             </motion.div>
                         </Box>
-                        <Typography variant="subtitle2" align="center">Copyright &copy; 2025 Leif Johannesson. Website custom-built using React.</Typography>
+                        <Typography variant="subtitle2" align="center">
+                            Copyright &copy; 2025 Leif Johannesson. Website custom-built using React.
+                        </Typography>
                     </Box>
                 </Box>
             </Box>

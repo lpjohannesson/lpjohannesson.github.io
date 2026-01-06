@@ -75,7 +75,7 @@ function ProjectsPage() {
         <PageContainer>
             <Typography variant="h6"><b>Games</b></Typography>
             <Box sx={{
-                maxHeight: "600px",
+                maxHeight: "590px",
                 overflow: "auto",
                 display: "flex",
                 flexDirection: "column",
