@@ -8,7 +8,7 @@ function ProjectsGamesPage() {
     };
 
     return (
-        <>
+        <Box sx={{ display: "flex", flexDirection: "column", gap: "8px" }}>
             <Box sx={containerStyle}>
                 <ProjectDisplay
                     title="Eyeballin' It"
@@ -47,7 +47,7 @@ function ProjectsGamesPage() {
                     2D top-down shooter game created as a school project in MonoGame.
                 </ProjectDisplay>
             </Box>
-        </>);
+        </Box>);
 }
 
 export default ProjectsGamesPage;
