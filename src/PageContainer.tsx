@@ -1,5 +1,5 @@
 import { Box, Button, Typography } from "@mui/material";
-import { Link as RouterLink } from "react-router";
+import { Outlet, Link as RouterLink } from "react-router";
 import { motion } from 'framer-motion';
 import type { ReactNode } from "react";
 
@@ -18,7 +18,7 @@ function NavButton(props: { page: string, children: ReactNode }) {
     )
 }
 
-function PageContainer(props: { children: ReactNode }) {
+function PageContainer() {
     return (
         <Box sx={{
             color: "white",
@@ -84,7 +84,7 @@ function PageContainer(props: { children: ReactNode }) {
                                 initial={{ opacity: 0, transform: "translate(0, 16px)" }}
                                 animate={{ opacity: 1, transform: "none" }}
                                 transition={{ duration: 0.5 }}>
-                                {props.children}
+                                <Outlet />
                             </motion.div>
                         </Box>
                         <Typography variant="subtitle2" align="center">

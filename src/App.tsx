@@ -2,9 +2,12 @@ import { Box } from "@mui/material"
 import { Route, HashRouter as Router, Routes } from "react-router"
 import { useEffect, useState } from "react";
 import HomePage from "./HomePage";
-import ProjectsPage from "./ProjectsPage";
+import ProjectsGamesPage from "./ProjectsGamesPage";
 import ContactPage from "./ContactPage";
 import { Video, VideoContext } from "./VideoContext";
+import Projects3DArtPage from "./Projects3DArtPage";
+import PageContainer from "./PageContainer";
+import ProjectsPageContainer from "./ProjectsPageContainer";
 
 function App() {
   useEffect(() => {
@@ -17,9 +20,15 @@ function App() {
       <VideoContext.Provider value={{video, setVideo}}>
       <Router>
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/projects" element={<ProjectsPage />} />
-          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/" element={<PageContainer />}>
+            <Route index element={<HomePage />} />
+            <Route path="projects" element={<ProjectsPageContainer />}>
+              <Route index element={<ProjectsGamesPage />} />
+              <Route path="3d-art" element={<Projects3DArtPage />} />
+            </Route>
+            <Route path="contact" element={<ContactPage />} />
+          </Route>
+          
         </Routes>
       </Router>
       {video == null ? null : <Box onClick={() => { setVideo(null); }} sx={{

@@ -3,7 +3,6 @@ import EmailIcon from '@mui/icons-material/Email';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import SvgIcon from '@mui/material/SvgIcon';
-import PageContainer from "./PageContainer";
 import type { ReactNode } from "react";
 
 const DiscordIcon = (props: any) => (
@@ -41,7 +40,7 @@ function ContactPage() {
     }
 
     return (
-        <PageContainer>
+        <>
             <Typography>My email and Discord are the best ways to reach me. Thank you!</Typography>
             <br />
             <Box sx={flexParams}>
@@ -53,7 +52,7 @@ function ContactPage() {
                 <ContactLink icon={LinkedInIcon}><b>LinkedIn:</b> <Link href="https://www.linkedin.com/in/lpjohannesson/">Link</Link></ContactLink>
                 <ContactLink icon={FiverrIcon}><b>Fiverr:</b> <Link href="https://www.fiverr.com/crossfrogmedia">Link</Link></ContactLink>
             </Box>
-        </PageContainer>
+        </>
     )
 }
 
