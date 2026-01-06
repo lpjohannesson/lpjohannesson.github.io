@@ -44,8 +44,10 @@ function ContactPage() {
         <PageContainer>
             <Typography>My email and Discord are the best ways to reach me. Thank you!</Typography>
             <br />
-            <ContactLink icon={EmailIcon}><b>Email:</b> lp.johannesson@gmail.com</ContactLink>
-            <ContactLink icon={DiscordIcon}><b>Discord:</b> lpjohannesson</ContactLink>
+            <Box sx={flexParams}>
+                <ContactLink icon={EmailIcon}><b>Email:</b> lp.johannesson@gmail.com</ContactLink>
+                <ContactLink icon={DiscordIcon}><b>Discord:</b> lpjohannesson</ContactLink>
+            </Box>
             <Box sx={flexParams}>
                 <ContactLink icon={GitHubIcon}><b>GitHub:</b> <Link href="https://github.com/lpjohannesson">Link</Link></ContactLink>
                 <ContactLink icon={LinkedInIcon}><b>LinkedIn:</b> <Link href="https://www.linkedin.com/in/lpjohannesson/">Link</Link></ContactLink>
