@@ -41,8 +41,7 @@ function ContactPage() {
 
     return (
         <>
-            <Typography>My email and Discord are the best ways to reach me. Thank you!</Typography>
-            <br />
+            <Typography sx={{ marginBottom: "16px" }}>My email and Discord are the best ways to reach me. Thank you!</Typography>
             <Box sx={flexParams}>
                 <ContactLink icon={EmailIcon}><b>Email:</b> lp.johannesson@gmail.com</ContactLink>
                 <ContactLink icon={DiscordIcon}><b>Discord:</b> lpjohannesson</ContactLink>
