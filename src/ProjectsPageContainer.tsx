@@ -1,5 +1,5 @@
 import { Box, Button } from "@mui/material";
-import { useState, type ReactNode } from "react";
+import { useRef, useState, type ReactNode } from "react";
 import { Outlet, Link as RouterLink } from "react-router";
 import FadeContainer from "./FadeContainer";
 
@@ -21,9 +21,11 @@ function NavButton(props: { page: string, children: ReactNode, reset: () => void
 
 function ProjectsPageContainer() {
     const [resetKey, setResetKey] = useState(0);
+    const scrollRef = useRef<any>(null);
 
     const reset = () => {
         setResetKey(prevKey => prevKey + 1);
+        scrollRef.current.scrollTop = 0;
     };
 
     return (
@@ -39,7 +41,7 @@ function ProjectsPageContainer() {
                 <NavButton reset={reset} page="/toys">Toys</NavButton>
                 <NavButton reset={reset} page="/3d-art">3D Art</NavButton>
             </Box>
-            <Box sx={{
+            <Box ref={scrollRef} sx={{
                 maxHeight: "580px",
                 overflow: "auto",
                 display: "flex",
