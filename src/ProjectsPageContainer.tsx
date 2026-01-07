@@ -10,7 +10,8 @@ function NavButton(props: { page: string, children: ReactNode, reset: () => void
                 color: "white",
                 borderColor: "#666666",
                 textTransform: "none",
-                width: "100%"
+                width: "100%",
+                borderRadius: "16px"
             }}>
                 {props.children}
             </Button>
@@ -31,9 +32,11 @@ function ProjectsPageContainer() {
                 display: "flex",
                 justifyContent: "space-between",
                 gap: "8px",
-                marginBottom: "8px"
+                marginBottom: "8px",
+                padding: "0 64px"
             }}>
                 <NavButton reset={reset} page="/">Games</NavButton>
+                <NavButton reset={reset} page="/toys">Toys</NavButton>
                 <NavButton reset={reset} page="/3d-art">3D Art</NavButton>
             </Box>
             <Box sx={{

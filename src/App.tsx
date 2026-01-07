@@ -8,6 +8,7 @@ import { Video, VideoContext } from "./VideoContext";
 import Projects3DArtPage from "./Projects3DArtPage";
 import PageContainer from "./PageContainer";
 import ProjectsPageContainer from "./ProjectsPageContainer";
+import ProjectsToysPage from "./ProjectsToysPage";
 
 function App() {
   useEffect(() => {
@@ -24,6 +25,7 @@ function App() {
             <Route index element={<HomePage />} />
             <Route path="projects" element={<ProjectsPageContainer />}>
               <Route index element={<ProjectsGamesPage />} />
+              <Route path="toys" element={<ProjectsToysPage />} />
               <Route path="3d-art" element={<Projects3DArtPage />} />
             </Route>
             <Route path="contact" element={<ContactPage />} />
