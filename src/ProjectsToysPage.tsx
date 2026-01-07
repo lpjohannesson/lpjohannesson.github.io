@@ -42,7 +42,7 @@ function ProjectsToysPage() {
                     gitHubLink="https://github.com/lpjohannesson/wiitris"
                     youTubeId="wY2lF1a7n6Q"
                     portrait={false}>
-                    A version of Tetris written from scratch as Wii homebrew!
+                    A version of Tetris written from scratch in C as Wii homebrew!
                 </ProjectDisplay>
             </Box>
         </Box>);
