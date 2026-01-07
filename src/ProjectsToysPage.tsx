@@ -1,4 +1,4 @@
-import { Box, Link } from "@mui/material";
+import { Box } from "@mui/material";
 import ProjectDisplay from "./ProjectDisplay";
 
 function ProjectsToysPage() {
