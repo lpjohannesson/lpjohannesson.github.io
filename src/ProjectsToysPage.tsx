@@ -38,9 +38,9 @@ function ProjectsToysPage() {
                 </ProjectDisplay>
                 <ProjectDisplay
                     title="WiiTris"
-                    bg="projects/aim-plat.png"
+                    bg="projects/wiitris.png"
                     gitHubLink="https://github.com/lpjohannesson/wiitris"
-                    youTubeId="kTeiTHk6080"
+                    youTubeId="wY2lF1a7n6Q"
                     portrait={false}>
                     A version of Tetris written from scratch as Wii homebrew!
                 </ProjectDisplay>
