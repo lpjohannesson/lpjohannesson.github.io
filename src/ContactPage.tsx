@@ -2,6 +2,7 @@ import { Box, Link, Typography } from "@mui/material"
 import EmailIcon from '@mui/icons-material/Email';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import PhoneIcon from '@mui/icons-material/Phone';
 import SvgIcon from '@mui/material/SvgIcon';
 import type { ReactNode } from "react";
 
@@ -41,10 +42,11 @@ function ContactPage() {
 
     return (
         <>
-            <Typography sx={{ marginBottom: "16px" }}>My email and Discord are the best ways to reach me. Thank you!</Typography>
+            <Typography sx={{ marginBottom: "16px", textAlign: "center" }}>My email and Discord are the best ways to reach me. Thank you!</Typography>
             <Box sx={flexParams}>
                 <ContactLink icon={EmailIcon}><b>Email:</b> lp.johannesson@gmail.com</ContactLink>
                 <ContactLink icon={DiscordIcon}><b>Discord:</b> lpjohannesson</ContactLink>
+                <ContactLink icon={PhoneIcon}><b>Phone:</b> (226) 792-5397</ContactLink>
             </Box>
             <Box sx={flexParams}>
                 <ContactLink icon={GitHubIcon}><b>GitHub:</b> <Link href="https://github.com/lpjohannesson">Link</Link></ContactLink>
