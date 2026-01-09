@@ -69,7 +69,7 @@ function PageContainer() {
                             </FadeContainer>
                         </Box>
                         <Typography variant="subtitle2" align="center">
-                            Copyright &copy; 2025 Leif Johannesson. Website custom-built using React.
+                            Copyright &copy; 2026 Leif Johannesson. Website custom-built using React.
                         </Typography>
                     </Box>
                 </Box>

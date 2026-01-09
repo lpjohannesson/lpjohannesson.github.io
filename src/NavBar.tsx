@@ -19,9 +19,9 @@ function NavBar(props: { links: { name: string, url: string }[], reset: () => vo
         <Box sx={{
             display: "flex",
             overflow: "hidden",
-            borderRadius: "32px",
-            border: "2px solid #444444",
-            backgroundColor: "#444444",
+            borderRadius: "16px",
+            border: "4px solid #444444",
+            backgroundColor: "#444444"
         }}>
             {props.links.map(link => (
                 <RouterLink to={`${link.url}`} style={{ width: "100%" }}>
@@ -29,6 +29,7 @@ function NavBar(props: { links: { name: string, url: string }[], reset: () => vo
                         textTransform: "none",
                         width: "100%",
                         color: "white",
+                        height: "32px",
                         backgroundColor: link == selectedLink ? "#666666" : "none" 
                     }}>
                         {link.name}
