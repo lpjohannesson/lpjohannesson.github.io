@@ -1,6 +1,6 @@
 import { Box } from "@mui/material"
 import { Navigate, Route, HashRouter as Router, Routes } from "react-router"
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import HomePage from "./HomePage";
 import ProjectsGamesPage from "./ProjectsGamesPage";
 import ContactPage from "./ContactPage";
@@ -12,10 +12,6 @@ import ProjectsToysPage from "./ProjectsToysPage";
 import ResumeDisplay from "./ResumeDisplay";
 
 function App() {
-  useEffect(() => {
-    document.title = 'Leif Johannesson Portfolio';
-  }, []);
-
   const [video, setVideo] = useState<Video | null>(null);
 
   return (<>
