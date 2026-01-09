@@ -46,14 +46,16 @@ function ProjectDisplay(props: {
                     <Button variant="contained" onClick={() => { setVideo(new Video(props.youTubeId, props.portrait)); }} sx={{
                         width: "100%",
                         borderRadius: "0",
-                        backgroundColor: "red"
+                        backgroundColor: "red",
+                        textTransform: "none"
                     }}>
-                        <PlayArrowIcon style={{ marginRight: "8px" }} />Play demo video
+                        <PlayArrowIcon style={{ marginRight: "8px" }} />Play Demo Video
                     </Button>
                     <Link href={props.gitHubLink}>
                         <Button variant="contained" sx={{
                             width: "100%",
-                            borderRadius: "0"
+                            borderRadius: "0",
+                            textTransform: "none"
                         }}>
                             <GitHubIcon style={{ marginRight: "8px" }} />View on GitHub
                         </Button>
