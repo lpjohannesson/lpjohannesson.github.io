@@ -26,7 +26,7 @@ function ProjectsGamesPage() {
                     gitHubLink="https://github.com/lpjohannesson/AimPlat"
                     youTubeId="kTeiTHk6080"
                     portrait={false}>
-                    3D character controller test with custom-made assets using Unity and Blender.
+                    3D character controller with custom-made assets using Unity and Blender.
                 </ProjectDisplay>
             </Box>
             <Box sx={containerStyle}>
