@@ -1,11 +1,35 @@
-import { Link, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
+import { useState } from "react";
+import { Outlet } from "react-router";
+import FadeContainer from "./FadeContainer";
+import NavBar from "./NavBar";
 
 function HomePage() {
+    const [resetKey, setResetKey] = useState(0);
+
+    const reset = () => {
+        setResetKey(prevKey => prevKey + 1);
+    };
+
     return (
         <>
             <Typography variant="subtitle1">Hello! I'm a software and game developer from Canada.</Typography>
-            <Typography variant="subtitle1">Here is my resume <Link href="https://docs.google.com/document/d/1lwQBg_FuuACZvSnHIJ3o34GddLe9ElhGt7qHqYBQVyU/edit?usp=sharing">(link)</Link>:</Typography>
-            <iframe style={{ flex: "1", border: "none" }} width="100%" src="https://docs.google.com/document/d/e/2PACX-1vRambdM9vglKdwpvNl2tgXALH8ikaGPPuB8nc6ecGKnu_721nM8vFL-8BVDFwsLapRfwDgozmg8atUw/pub?embedded=true"></iframe>
+            <Typography sx={{ marginBottom: "8px" }} variant="subtitle1">Here are my resumes:</Typography>
+            
+            <Box sx={{ 
+                margin: "0 64px",
+                marginBottom: "8px"
+            }}>
+                <NavBar links={[
+                    { name: "Game Developer", url: "/home/game-developer" },
+                    { name: "Software Developer", url: "/home/software-developer" },
+                ]} reset={reset} />
+            </Box>
+
+            <FadeContainer key={resetKey}>
+                <Outlet />
+            </FadeContainer>
+            
         </>
     )
 }

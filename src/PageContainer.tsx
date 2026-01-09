@@ -1,22 +1,8 @@
-import { Box, Button, Typography } from "@mui/material";
-import { Outlet, Link as RouterLink } from "react-router";
-import { useState, type ReactNode } from "react";
+import { Box, Typography } from "@mui/material";
+import { Outlet  } from "react-router";
+import { useState } from "react";
 import FadeContainer from "./FadeContainer";
-
-function NavButton(props: { page: string, children: ReactNode, reset: () => void }) {
-    return (
-        <RouterLink to={props.page} style={{ width: "100%" }}>
-            <Button onClick={props.reset} variant="outlined" sx={{
-                color: "white",
-                borderColor: "#666666",
-                textTransform: "lowercase",
-                width: "100%"
-            }}>
-                {props.children}
-            </Button>
-        </RouterLink>
-    )
-}
+import NavBar from "./NavBar";
 
 function PageContainer() {
     const [resetKey, setResetKey] = useState(0);
@@ -64,15 +50,11 @@ function PageContainer() {
                                 <Typography variant="h6">Software/Game Developer</Typography>
                             </Box>
                         </Box>
-                        <Box sx={{
-                            display: "flex",
-                            justifyContent: "space-between",
-                            gap: "8px"
-                        }}>
-                            <NavButton reset={reset} page="/">Home</NavButton>
-                            <NavButton reset={reset} page="/projects">Projects</NavButton>
-                            <NavButton reset={reset} page="/contact">Contact / Links</NavButton>
-                        </Box>
+                        <NavBar links={[
+                            { name: "Home", url: "/home" },
+                            { name: "Projects", url: "/projects" },
+                            { name: "Contact / Links", url: "/contact" },
+                        ]} reset={reset}></NavBar>
                     </Box>
                     <Box sx={{
                         padding: "8px 12px",
