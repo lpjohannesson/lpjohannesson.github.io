@@ -44,7 +44,7 @@ function ProjectsGamesPage() {
                     gitHubLink="https://github.com/lpjohannesson/robot-game"
                     youTubeId="0IRnIBfflTQ"
                     portrait={false}>
-                    2D top-down shooter game created as a school project in MonoGame.
+                    2D top-down shooter game created as a school project in MonoGame with C#.
                 </ProjectDisplay>
             </Box>
         </Box>);
