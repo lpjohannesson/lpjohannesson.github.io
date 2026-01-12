@@ -30,6 +30,10 @@ function App() {
                 link="https://docs.google.com/document/d/1lwQBg_FuuACZvSnHIJ3o34GddLe9ElhGt7qHqYBQVyU/edit?usp=sharing"
                 embed="https://docs.google.com/document/d/e/2PACX-1vRambdM9vglKdwpvNl2tgXALH8ikaGPPuB8nc6ecGKnu_721nM8vFL-8BVDFwsLapRfwDgozmg8atUw/pub?embedded=true"
               />} />
+              <Route path="graphics-programmer" element={<ResumeDisplay
+                link="https://docs.google.com/document/d/1pUJM8hGEyimhxaXj0CmU8iGk86T9mHmEKkcG72nJqlU/edit?usp=sharing"
+                embed="https://docs.google.com/document/d/e/2PACX-1vQ7hOyz18gUR7qj3zFOu0N1Hd0bakVdyrTEbPl-VGS-9yQ9GzItHfuvad8SL2RUqKTCohqxlE9InqFR/pub?embedded=true"
+              />} />
             </Route>
             <Route path="projects" element={<ProjectsPage />}>
               <Route index element={<Navigate to="games" replace />} /> 
