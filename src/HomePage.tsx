@@ -22,8 +22,8 @@ function HomePage() {
             }}>
                 <NavBar links={[
                     { name: "Game Developer", url: "/home/game-developer" },
-                    { name: "Software Developer", url: "/home/software-developer" },
                     { name: "Graphics Programmer", url: "/home/graphics-programmer" },
+                    { name: "Software Developer", url: "/home/software-developer" },
                 ]} reset={reset} />
             </Box>
 
