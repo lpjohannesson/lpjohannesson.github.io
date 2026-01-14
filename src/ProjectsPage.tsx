@@ -26,18 +26,17 @@ function ProjectsPage() {
                 ]} reset={reset} />
             </Box>
             
-
-            <Box ref={scrollRef} sx={{
-                maxHeight: "570px",
-                overflow: "auto",
-                display: "flex",
-                flexDirection: "column",
-                gap: "8px"
-            }}>
-                <FadeContainer key={resetKey}>
+            <FadeContainer key={resetKey}>
+                <Box ref={scrollRef} sx={{
+                    height: "570px",
+                    overflow: "auto",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "8px",
+                }}>
                     <Outlet />
-                </FadeContainer>
-            </Box>
+                </Box>   
+            </FadeContainer>
         </>
     )
 }

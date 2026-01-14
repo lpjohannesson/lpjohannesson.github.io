@@ -30,7 +30,6 @@ function HomePage() {
             <FadeContainer key={resetKey}>
                 <Outlet />
             </FadeContainer>
-            
         </>
     )
 }
