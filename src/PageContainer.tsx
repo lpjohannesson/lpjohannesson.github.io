@@ -3,6 +3,7 @@ import { Outlet  } from "react-router";
 import { useState } from "react";
 import FadeContainer from "./FadeContainer";
 import NavBar from "./NavBar";
+import Palette from "./Palette";
 
 function PageContainer() {
     const [resetKey, setResetKey] = useState(0);
@@ -26,14 +27,14 @@ function PageContainer() {
             }}>
                 <Box sx={{
                     borderRadius: "16px",
-                    border: "4px solid #333333",
+                    border: `4px solid ${Palette.border}`,
                     overflow: "hidden",
                     height: "100%",
                     display: "flex",
                     flexDirection: "column"
                 }}>
                     <Box sx={{
-                        backgroundColor: "#333333",
+                        backgroundColor: `${Palette.border}`,
                         padding: "12px 16px",
                         display: "flex",
                         flexDirection: "column",
@@ -54,7 +55,7 @@ function PageContainer() {
                             { name: "Home", url: "/home" },
                             { name: "Projects", url: "/projects" },
                             { name: "Contact / Links", url: "/contact" },
-                        ]} reset={reset}></NavBar>
+                        ]} reset={reset} textStyle={{ fontWeight: "bold", textTransform: "lowercase", fontSize: "16px" }}></NavBar>
                     </Box>
                     <Box sx={{
                         padding: "8px 12px",

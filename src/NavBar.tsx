@@ -1,7 +1,8 @@
 import { Box, Button } from "@mui/material";
 import { Link as RouterLink, useLocation } from "react-router";
+import Palette from "./Palette";
 
-function NavBar(props: { links: { name: string, url: string }[], reset: () => void }) {
+function NavBar(props: { links: { name: string, url: string }[], reset: () => void, textStyle: any }) {
     const location = useLocation();
 
     let selectedLink = props.links[0];
@@ -20,18 +21,18 @@ function NavBar(props: { links: { name: string, url: string }[], reset: () => vo
             display: "flex",
             overflow: "hidden",
             borderRadius: "16px",
-            border: "4px solid #444444",
-            backgroundColor: "#444444"
+            border: `4px solid ${Palette.navbarBack}`,
+            backgroundColor: `${Palette.navbarBack}`
         }}>
             {props.links.map(link => (
                 <RouterLink to={`${link.url}`} style={{ width: "100%" }}>
-                    <Button onClick={props.reset} sx={{
+                    <Button onClick={props.reset} sx={Object.assign({}, {
                         textTransform: "none",
                         width: "100%",
-                        color: "white",
+                        color: link == selectedLink ? `${Palette.navbarBack}` : "white" ,
                         height: "32px",
-                        backgroundColor: link == selectedLink ? "#666666" : "none" 
-                    }}>
+                        backgroundColor: link == selectedLink ? `${Palette.navbarFront}` : "none" 
+                    }, props.textStyle)}>
                         {link.name}
                     </Button>
                 </RouterLink>
