@@ -2,7 +2,7 @@ import { Box, Button } from "@mui/material";
 import { Link as RouterLink, useLocation } from "react-router";
 import Palette from "./Palette";
 
-function NavBar(props: { links: { name: string, url: string }[], reset: () => void, textStyle: any }) {
+function NavBar(props: { links: { name: string, url: string }[], reset: () => void, textStyle?: any }) {
     const location = useLocation();
 
     let selectedLink = props.links[0];
