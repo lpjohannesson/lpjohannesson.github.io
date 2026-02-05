@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import { useState } from "react";
 import { Outlet } from "react-router";
 import FadeContainer from "./FadeContainer";
