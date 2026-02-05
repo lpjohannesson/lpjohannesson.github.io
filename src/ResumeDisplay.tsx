@@ -1,6 +1,6 @@
 import { Button, Link } from "@mui/material";
 import LinkIcon from '@mui/icons-material/Link';
-import Palette from "./Palette";
+import { Palette } from "./Palette";
 
 function ResumeDisplay(props: { link: string, embed: string }) {
     return (
@@ -15,7 +15,7 @@ function ResumeDisplay(props: { link: string, embed: string }) {
                     textTransform: "none",
                     display: "flex",
                     gap: "8px",
-                    backgroundColor: `${Palette.navbarBack}`
+                    backgroundColor: `${Palette.mainNavbar.back}`
                 }}>
                     <LinkIcon />
                     Open Resume

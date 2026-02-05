@@ -1,7 +1,6 @@
 import { Box } from "@mui/material"
 import { Navigate, Route, HashRouter as Router, Routes } from "react-router"
 import { useState } from "react";
-import HomePage from "./HomePage";
 import ProjectsGamesPage from "./ProjectsGamesPage";
 import ContactPage from "./ContactPage";
 import { Video, VideoContext } from "./VideoContext";
@@ -10,6 +9,8 @@ import PageContainer from "./PageContainer";
 import ProjectsPage from "./ProjectsPage";
 import ProjectsToysPage from "./ProjectsToysPage";
 import ResumeDisplay from "./ResumeDisplay";
+import ResumesPage from "./ResumesPage";
+import { HomePage, TechCppPage, TechCreativePage, TechGameDevPage, TechLanguagesPage, TechMiscPage, TechWebDevPage } from "./HomePage";
 
 function App() {
   const [video, setVideo] = useState<Video | null>(null);
@@ -21,6 +22,15 @@ function App() {
           <Route path="/" element={<PageContainer />}>
             <Route index element={<Navigate to="home" replace />} />
             <Route path="home" element={<HomePage />}>
+              <Route index element={<Navigate to="programming-languages" replace />} /> 
+              <Route path="programming-languages" element={<TechLanguagesPage />} />
+              <Route path="c-cpp-technologies" element={<TechCppPage />} />
+              <Route path="game-development" element={<TechGameDevPage />} />
+              <Route path="web-development" element={<TechWebDevPage />} />
+              <Route path="creative-tools" element={<TechCreativePage />} />
+              <Route path="miscellaneous-tools" element={<TechMiscPage />} />
+            </Route>
+            <Route path="resumes" element={<ResumesPage />}>
               <Route index element={<Navigate to="game-developer" replace />} />
               <Route path="game-developer" element={<ResumeDisplay
                 link="https://docs.google.com/document/d/1b7fyzjKTQDf8BxVTfLfe3PsiZpzmbFxaw8mh8-mD0a0/edit?usp=sharing"

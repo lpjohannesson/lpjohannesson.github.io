@@ -3,7 +3,7 @@ import { Outlet  } from "react-router";
 import { useState } from "react";
 import FadeContainer from "./FadeContainer";
 import NavBar from "./NavBar";
-import Palette from "./Palette";
+import { Palette } from "./Palette";
 
 function PageContainer() {
     const [resetKey, setResetKey] = useState(0);
@@ -53,9 +53,13 @@ function PageContainer() {
                         </Box>
                         <NavBar links={[
                             { name: "Home", url: "/home" },
+                            { name: "Resumes", url: "/resumes" },
                             { name: "Projects", url: "/projects" },
                             { name: "Contact / Links", url: "/contact" },
-                        ]} reset={reset} textStyle={{ fontWeight: "bold", textTransform: "lowercase", fontSize: "16px" }}></NavBar>
+                        ]}
+                            reset={reset}
+                            palette={Palette.mainNavbar}
+                            textStyle={{ fontWeight: "bold", textTransform: "lowercase", fontSize: "16px" }}></NavBar>
                     </Box>
                     <Box sx={{
                         padding: "8px 12px",

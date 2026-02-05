@@ -3,6 +3,7 @@ import { useContext, type ReactNode } from "react";
 import { Video, VideoContext } from "./VideoContext";
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import { Palette } from "./Palette";
 
 function ProjectDisplay(props: {
     children: ReactNode,
@@ -16,7 +17,7 @@ function ProjectDisplay(props: {
 
     return (<>
         <Box sx={{
-            border: "4px solid #333333",
+            border: `4px solid ${Palette.border}`,
             borderRadius: "16px",
             overflow: "hidden",
             flex: "1"

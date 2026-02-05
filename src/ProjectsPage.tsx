@@ -3,6 +3,7 @@ import { useRef, useState } from "react";
 import { Outlet } from "react-router";
 import FadeContainer from "./FadeContainer";
 import NavBar from "./NavBar";
+import { Palette } from "./Palette";
 
 function ProjectsPage() {
     const [resetKey, setResetKey] = useState(0);
@@ -23,7 +24,7 @@ function ProjectsPage() {
                     { name: "Games", url: "/projects/games" },
                     { name: "Toys", url: "/projects/toys" },
                     { name: "3D Art", url: "/projects/3d-art" },
-                ]} reset={reset} />
+                ]} reset={reset} palette={Palette.subNavbar} />
             </Box>
             
             <FadeContainer key={resetKey}>
