@@ -127,7 +127,7 @@ function HomePage() {
                 <br />My dream is to create memorable and engaging digital experiences, and I have spent a lot of time and effort acquiring skills in programming and multimedia for this reason.
             </Typography>
             <Typography variant="subtitle1">
-                <br />In the past, as examples, I have prototyped 2D and 3D indie game projects both solo and with friends, helped online clients with programming technicalities as a freelancer, and gotten into the weeds of lower-level custom game engine and graphics programming.
+                <br />In the past, as examples, I have prototyped 2D and 3D indie game projects both solo and with friends, helped online clients with programming technicalities as a freelancer, and gotten into the weeds of lower-level custom game engine and graphics programming. I have also worked with various levels of the web stack during my education.
             </Typography>
             <Typography variant="subtitle1">
                 <br />Here are some technologies I have worked with:
